@@ -1,4 +1,4 @@
-# truenas-plugin-komga
+# iocage-plugin-komga
 
 ## Description
 This is an unofficial Truenas plugin, to enable Komga on my setup.
