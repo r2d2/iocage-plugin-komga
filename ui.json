@@ -1,0 +1,4 @@
+{ 
+    "adminportal": "http://%%IP%%:8080/", 
+    "docurl": "https://github.com/r2d2/truenas-plugin-komga.git"
+}
