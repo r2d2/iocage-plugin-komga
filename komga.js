@@ -8,8 +8,7 @@
         "boot": "on", 
         "mount_fdescfs": "yes",
         "mount_procfs": "yes",
-        "nat":"1",
-        "nat_forwards": "tcp(8080:8080)"
+        "dhcp":"1"
     },
 
     "pkgs": [ "openjdk11-jre", "sqlite3" ], 
