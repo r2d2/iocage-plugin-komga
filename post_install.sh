@@ -3,7 +3,7 @@
 KOMGA_APP_DIR=/usr/local/komga
 
 mkdir -p $KOMGA_APP_DIR
-fetch https://github.com/gotson/komga/releases/download/v0.162.0/komga-0.162.0.jar -o $KOMBA_APP_DIR/komga.jar
+fetch https://github.com/gotson/komga/releases/download/v0.162.0/komga-0.162.0.jar -o $KOMGA_APP_DIR/komga.jar
 
 # Create user & change directory ownership
 pw useradd komga -u 5469 -s /bin/csh -m
