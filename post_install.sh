@@ -1,18 +1,21 @@
 #!/bin/sh
 
-# fetch komga
-fetch https://github.com/gotson/komga/releases/download/v0.27.7/komga-0.27.7.jar
+KOMGA_RELEASE="0.162.0"
+cp /usr/local/etc/komga-plugin.conf.sample /usr/local/etc/komga-plugin.conf
+. /usr/local/etc/komga-plugin.conf
+: "${KOMGA_APP_DIR:=/usr/local/komga}"
 
-# start komga
+mkdir -p $KOMGA_APP_DIR
+cd $KOMBA_APP_DIR
+fetch https://github.com/gotson/komga/releases/download/v$KONGA_RELEASE/komga-$KONGA_RELEASE.jar
+ln -sf komga-0.162.0.jar "komga.jar"
 
+# Start service
+sysrc -f /etc/rc.conf komga_enable="YES"
+service komga start
 
-# Create user 'tetris'
-pw add user -n tetris -c Tetris -s /bin/csh -m
-# Configure shellinabox
-fetch -o /home/tetris/white-on-black.css 
-https://raw.githubusercontent.com/shellinabox/shellinabox/master/shellinabox/white-on-black.css 
-sysrc shellinaboxd_enable=YES sysrc shellinaboxd_flags="--css 
-/home/tetris/white-on-black.css -t -s /:tetris:tetris:HOME:bastet"
-# Start the service
-service shellinaboxd start
-
+{
+    echo "✅ komga installation is complete!"
+    echo "App dir: $KOMGA_APP_DIR"
+    echo "Komga version: $KOMGA_RELEASE"
+} > /root/PLUGIN_INFO

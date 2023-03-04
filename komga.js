@@ -6,11 +6,14 @@
     "https://github.com/r2d2/truenas-plugin-komga.git", 
     "properties": 
     {
+        "boot": "on", 
+        "mount_fdescfs": "yes",
+        "mount_procfs": "yes",
         "nat":"1",
         "nat_forwards": "tcp(8080:8080)"
     },
 
-    "pkgs": [ "openjdk11" ], 
+    "pkgs": [ "openjdk11-jre", "sqlite3" ], 
 
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly", 
  
