@@ -1,5 +1,9 @@
 # truenas-plugin-komga
 
+## Description
+This is an unofficial Truenas plugin, to enable Komga on my setup.
+This is usable directly by entering commands in the Truenas builtin shell
+
 ## Installation 
 
 First, get the json plugin description
